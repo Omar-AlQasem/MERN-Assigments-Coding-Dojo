@@ -1,11 +1,15 @@
-import './App.css';
-import Main from './views/Main'
+import React from 'react';
+import { Router } from '@reach/router';
+import Main from './views/Main';
+import Details from './views/Details';
 function App() {
   return (
     <div className="App">
-      <Main />
+      <Router>
+        <Main path="products/"/>
+        <Details path="products/:id" />
+      </Router>
     </div>
   );
 }
-
 export default App;
